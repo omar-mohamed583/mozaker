@@ -1,0 +1,6 @@
+{
+  "https": true,
+  "fiveServer.https": true,
+  "fiveServer.host": "localhost",
+  "fiveServer.navigate": true
+} 

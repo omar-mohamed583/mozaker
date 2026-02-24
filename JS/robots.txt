@@ -1,0 +1,29 @@
+# Robots.txt for Mozaker AI
+# https://mozaker.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: *.json$
+
+# Sitemap location
+Sitemap: https://mozaker.com/sitemap.xml
+
+# Crawl delay (optional - use if server is experiencing high load)
+# Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

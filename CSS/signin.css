@@ -1,0 +1,345 @@
+/* Global Rules */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  color: var(--white);
+  transition: font-family 0.3s ease;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+  --black-100: hsl(0, 0%, 8%);
+  --black-400: hsl(0, 0%, 13%);
+  --black-900: hsl(0, 0%, 23%);
+  --white: hsl(0, 0%, 93%);
+  --gray: hsl(0, 0%, 90%);
+  --rotation: 125deg;
+  --start-offset: -7rem;
+  --end-offset: 28%;
+}
+
+html[dir="ltr"] {
+  --rotation: -125deg;
+  --start-offset: 28%;
+  --end-offset: -7rem;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Prevent autofill color change */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: all 99999999999999999999999999999999999999999999s !important;
+}
+
+/* End Of Global Rules */
+
+/* Language Switcher */
+.lang-switcher {
+  position: fixed;
+  top: 1.5rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Default position for LTR (English) */
+html[dir="ltr"] .lang-switcher {
+  right: 1.5rem;
+}
+
+/* Position for RTL (Arabic) */
+html[dir="rtl"] .lang-switcher {
+  left: 1.5rem;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--black-400);
+  border: 1px solid var(--black-900);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.lang-btn:hover {
+  background-color: var(--black-900);
+  transform: translateY(-2px);
+}
+
+.lang-btn svg {
+  flex-shrink: 0;
+}
+
+.lang-btn span {
+  font-weight: 600;
+}
+
+/* Form Styles */
+form:not(.modal-form) {
+  min-width: min(calc(27vw + 1.25rem) , 40%);
+  max-width: min(450px, 70%);
+
+  @media (max-width: 800px) {
+    min-width: calc(27vw + 1.25rem);
+    max-width: max(300px, 70%);
+  }
+}
+
+.form-container {
+  height: 100vh;
+  background-color: var(--black-100);
+  transition: all 0.3s ease;
+}
+
+button {
+  border: 1px solid var(--black-900);
+  background-color: transparent;
+  color: var(--white);
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  font-weight: 500;
+  display: flex;
+  padding: 0.7rem 1.3rem;
+  place-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  
+  & img {
+    aspect-ratio: 1;
+    width: 1.7rem; 
+  }
+
+  &:hover {
+    background-color: var(--black-400);
+  }
+}
+
+/* Social Buttons Container */
+.social-buttons-container {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.social-buttons-container[style*="display: flex"] {
+  display: flex !important;
+  opacity: 1;
+  max-height: 200px;
+}
+
+legend {
+  --inline-offset: 0.5%;
+  font-size: 1.038rem;
+  letter-spacing: 0.2px;
+  font-weight: 600;
+}
+
+legend::before, 
+legend::after {
+  content: "";
+  position: absolute;
+  width: 43.4%;
+  top: calc(50% - 1px);
+  height: 1px;
+  background-color: var(--black-900);
+}
+
+/* LTR legend lines */
+html[dir="ltr"] legend::after { 
+  left: var(--inline-offset);
+}
+
+html[dir="ltr"] legend::before {
+  right: var(--inline-offset);
+}
+
+/* RTL legend lines */
+html[dir="rtl"] legend::after { 
+  right: var(--inline-offset);
+}
+
+html[dir="rtl"] legend::before {
+  left: var(--inline-offset);
+}
+
+button[type="submit"] {
+  color: var(--black-100);
+  background-color: var(--white);
+  border: none;
+
+  &:hover {
+    background-color: hsl(from var(--white) h s 80%);
+  }
+}
+
+input {
+  padding: 0.7rem 0.9rem!important;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  background-color: #262626;
+  border: 2.5px solid #262626;
+  transition: border-color 0.2s;
+  outline: 0;
+  align-content: center;
+
+  &:focus {
+    border-color: var(--white);
+  }
+
+  &:invalid:not(:placeholder-shown):not(.otp-input) {
+    border-color: hsl(0, 77%, 36%);
+  }
+
+  &:valid:not(:placeholder-shown):not(.otp-input) {
+    border-color: hsl(118, 77%, 36%);
+  }
+}
+
+button + p {
+  font-size: 0.888rem;
+}
+
+p, 
+legend {
+  color: hsl(from var(--black-900) h s 50%);
+}
+
+p:last-child {
+  font-size: 0.975rem;
+}
+
+/* Smooth transitions for direction changes */
+html,
+body,
+.form-container,
+form,
+button,
+input {
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lang-switcher {
+    top: 1rem;
+  }
+  
+  html[dir="ltr"] .lang-switcher {
+    right: 1rem;
+  }
+  
+  html[dir="rtl"] .lang-switcher {
+    left: 1rem;
+  }
+
+  .lang-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+
+/* Book Holder */
+
+.books-holder {
+  background-color: var(--gray);
+  right: var(--end-offset);
+  inset-block: -4rem;
+  left: var(--start-offset);
+}
+
+.cont {
+  rotate: var(--rotation);
+  gap: 1.5rem;
+}
+
+.holder {
+  display: flex;
+  flex-flow: column;
+  gap: .4rem;
+  animation: move 13s linear infinite alternate;
+
+  & img {
+    width: 30rem;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+}
+
+@keyframes move {
+  to {
+    translate: 0 var(--move); 
+  }
+}

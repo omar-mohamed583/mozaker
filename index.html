@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>مذاكر الـ AI | تعلم باستخدام الذكاء الاصطناعي ببساطة</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="مذاكر AI - منصة تعليمية مبتكرة تستخدم الذكاء الاصطناعي لتنظيم المذاكرة وتحسين الأداء الدراسي. تعلم بأسلوب بسيط وعملي من الأساسيات حتى التطبيق المتقدم.">
+  <meta name="keywords" content="مذاكر, AI, ذكاء اصطناعي, تعليم, مذاكرة, دراسة, تنظيم وقت, إنتاجية, تعلم ذكي, artificial intelligence education">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="فريق مذاكر">
+  
+  <!-- Security -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Performance optimization -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="//cdnjs.cloudflare.com" crossorigin>
+  
+  <!-- Critical CSS - Inlined for better performance -->
+  <style>
+    /* Critical above-the-fold styles */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{margin:0;background:#fff;font-family:"Inter",sans-serif;color:#1a1a1a}
+    header{position:fixed;top:2rem;left:50%;transform:translateX(-50%);z-index:10000;width:90%;max-width:1200px}
+    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center}
+    .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" as="style" href="CSS/styles.css">
+  <link rel="preload" as="style" href="CSS/lang-styles.css">
+  
+  <link rel="canonical" href="https://mozaker.com/">
+  <meta name="format-detection" content="telephone=yes">
+  <meta name="HandheldFriendly" content="true">
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="ar" href="https://mozaker.com/ar/" />
+  <link rel="alternate" hreflang="en" href="https://mozaker.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://mozaker.com/" />
+
+  <!-- Favicon and theme -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <meta name="theme-color" content="#0047AB">
+  <meta name="apple-mobile-web-app-title" content="Mozaker | مُذاكر " />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mozaker.com/">
+  <meta property="og:title" content="مذاكر الـ AI | تعلم الذكاء الاصطناعي ببساطة">
+  <meta property="og:description" content="منصة تعليمية مبتكرة تستخدم الذكاء الاصطناعي لتنظيم المذاكرة وتحسين الأداء الدراسي">
+  <meta property="og:image" content="https://mozaker.com/images/social-sharing-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="مذاكر AI - منصة التعلم بالذكاء الاصطناعي">
+  <meta property="og:locale" content="ar_EG">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@mozaker">
+  <meta name="twitter:title" content="مذاكر الـ AI | تعلم الذكاء الاصطناعي ببساطة">
+  <meta name="twitter:description" content="منصة تعليمية مبتكرة تستخدم الذكاء الاصطناعي لتنظيم المذاكرة وتحسين الأداء الدراسي">
+  <meta name="twitter:image" content="https://mozaker.com/images/social-sharing-1200x630.png">
+  <meta name="twitter:image:alt" content="مذاكر AI - منصة التعلم بالذكاء الاصطناعي">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "مذاكر AI",
+    "alternateName": "Mozaker AI",
+    "url": "https://mozaker.com",
+    "logo": "https://mozaker.com/images/logo.png",
+    "description": "منصة تعليمية تستخدم الذكاء الاصطناعي لتحسين الأداء الدراسي",
+    "sameAs": [
+      "https://www.facebook.com/mozaker",
+      "https://www.linkedin.com/company/mozaker",
+      "https://www.instagram.com/mozaker",
+      "https://discord.gg/mozaker",
+      "https://t.me/mozaker"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "availableLanguage": ["Arabic", "English"]
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "https://mozaker.com"
+    }]
+  }
+  </script>
+
+  <!-- Bootstrap CSS File -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- Our CSS Files -->
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/lang-styles.css">
+
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#cont" class="skip-link">انتقل إلى المحتوى الرئيسي</a>
+
+  <!-- Hidden H1 for SEO -->
+  <h1 class="visually-hidden">مذاكر AI - منصة التعلم بالذكاء الاصطناعي</h1>
+
+  <!-- Header Start -->
+  <header class="position-fixed start-50 translate-middle-x p-3" role="banner">
+    <div class="nav-container">
+      <div class="nav-brand" role="heading" aria-level="2">مُذاكِر</div>
+      
+      <!-- Hamburger Menu Button -->
+      <button class="nav-toggler" id="navToggler" aria-label="فتح قائمة التنقل" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="القائمة الرئيسية">
+        <ul class="nav-list justify-content-start">
+          <li class="nav-item">
+            <a href="#hero" class="nav-link">عن مُذاكِر</a>
+          </li>
+          <li class="nav-item">
+            <a href="#cont" class="nav-link">راسلنا</a>
+          </li>
+          <li class="nav-item">
+            <a href="signin.html" class="nav-link">تسجيل الدخول</a>
+          </li>
+
+          <div class="radio-input position-fixed" role="radiogroup" aria-label="اختيار اللغة">
+            <label title="العربية">
+              <input value="ar" name="value-radio" id="value-1" type="radio" checked aria-label="اللغة العربية" />
+              <span>ar</span>
+            </label>
+            <label title="English">
+              <input value="en" name="value-radio" id="value-2" type="radio" aria-label="English Language" />
+              <span>en</span>
+            </label>
+            <span class="selection" aria-hidden="true"></span>
+          </div>
+        
+          <label class="theme-switch position-fixed" aria-label="تبديل الوضع الداكن">
+            <input type="checkbox" class="theme-switch__checkbox" role="switch" aria-checked="false" aria-label="تفعيل الوضع الداكن">
+            <div class="theme-switch__container">
+              <div class="theme-switch__clouds"></div>
+              <div class="theme-switch__stars-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
+                </svg>
+              </div>
+              <div class="theme-switch__circle-container">
+                <div class="theme-switch__sun-moon-container">
+                  <div class="theme-switch__moon">
+                    <div class="theme-switch__spot"></div>
+                    <div class="theme-switch__spot"></div>
+                    <div class="theme-switch__spot"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <section class="hero position-relative d-flex container-fluid" id="hero" aria-labelledby="hero-heading">
+      <div class="container p-md-0 d-flex flex-column">
+
+        <h2 id="hero-heading" class="text-right text-capitalize"><strong>مذاكر</strong> الـ <bdi>AI</bdi> هو مكانك للتعلم باستخدام الذكاء الاصطناعي بأسلوب بسيط وعملي، من الأساسيات حتى التطبيق، خطوة بخطوة وباللغة التي تفهمها.</h2>
+
+        <a class="btn btn-primary flex-md-grow-0 px-5 fs-4 mt-5 align-self-start" role="button" href="signin.html" aria-label="ابدأ التعلم الآن">
+          ابدأ الأن 
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi mx-2  bi-arrow-up-left-circle" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-5.904 2.803a.5.5 0 1 0 .707-.707L6.707 6h2.768a.5.5 0 1 0 0-1H5.5a.5.5 0 0 0-.5.5v3.975a.5.5 0 0 0 1 0V6.707z"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="partners" style="padding-block:7rem" aria-labelledby="partners-heading"> 
+      <div class="container-fluid overflow-x-hidden px-5">
+        <h2 id="partners-heading" class="fw-bold fs-2 text-center">شركاؤنا</h2>
+        <div class="wrapper d-flex flex-nowrap" style="gap: 7rem" role="list" aria-label="قائمة الشركاء">
+          <!-- First set of icons -->
+          <figure class="figure" role="listitem" tabindex="0" aria-label="جوجل - شريك تقني">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" class="bi bi-google" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="google">جوجل</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" tabindex="0" aria-label="ميتا - شريك تقني">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" class="bi bi-meta" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a55 55 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3q.477-.001.924.122c.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714m1.516 2.224q-.378-.615-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87zM4.846 4.756c.725.1 1.385.634 2.34 2.001A212 212 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264q.137 0 .27.018"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="meta">ميتا</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" tabindex="0" aria-label="مايكروسوفت - شريك تقني">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" class="bi bi-microsoft" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M7.462 0H0v7.19h7.462zM16 0H8.538v7.19H16zM7.462 8.211H0V16h7.462zm8.538 0H8.538V16H16z"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="microsoft">مايكروسوفت</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" tabindex="0" aria-label="لينكد إن - شريك تقني">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" class="bi bi-linkedin" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="linkedin">لينكد إن</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" tabindex="0" aria-label="جيت هاب - شريك تقني">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="github">جيت هاب</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" tabindex="0" aria-label="أبل - شريك تقني">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+              <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="apple">أبل</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" tabindex="0" aria-label="أمازون - شريك تقني">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor" class="bi bi-amazon" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M10.813 11.968c.157.083.36.074.5-.05l.005.005a90 90 0 0 1 1.623-1.405c.173-.143.143-.372.006-.563l-.125-.17c-.345-.465-.673-.906-.673-1.791v-3.3l.001-.335c.008-1.265.014-2.421-.933-3.305C10.404.274 9.06 0 8.03 0 6.017 0 3.77.75 3.296 3.24c-.047.264.143.404.316.443l2.054.22c.19-.009.33-.196.366-.387.176-.857.896-1.271 1.703-1.271.435 0 .929.16 1.188.55.264.39.26.91.257 1.376v.432q-.3.033-.621.065c-1.113.114-2.397.246-3.36.67C3.873 5.91 2.94 7.08 2.94 8.798c0 2.2 1.387 3.298 3.168 3.298 1.506 0 2.328-.354 3.489-1.54l.167.246c.274.405.456.675 1.047 1.166ZM6.03 8.431C6.03 6.627 7.647 6.3 9.177 6.3v.57c.001.776.002 1.434-.396 2.133-.336.595-.87.961-1.465.961-.812 0-1.286-.619-1.286-1.533M.435 12.174c2.629 1.603 6.698 4.084 13.183.997.28-.116.475.078.199.431C13.538 13.96 11.312 16 7.57 16 3.832 16 .968 13.446.094 12.386c-.24-.275.036-.4.199-.299z"/>
+              <path d="M13.828 11.943c.567-.07 1.468-.027 1.645.204.135.176-.004.966-.233 1.533-.23.563-.572.961-.762 1.115s-.333.094-.23-.137c.105-.23.684-1.663.455-1.963-.213-.278-1.177-.177-1.625-.13l-.09.009q-.142.013-.233.024c-.193.021-.245.027-.274-.032-.074-.209.779-.556 1.347-.623"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="amazon">أمازون</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" tabindex="0" aria-label="يوتيوب - شريك تقني">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="youtube">يوتيوب</figcaption>
+          </figure>
+
+          <!-- DUPLICATE THE SAME ICONS AGAIN FOR SEAMLESS LOOP -->
+          <figure class="figure" role="listitem" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" class="bi bi-google" viewBox="0 0 16 16">
+              <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="google">جوجل</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" class="bi bi-meta" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a55 55 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3q.477-.001.924.122c.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714m1.516 2.224q-.378-.615-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87zM4.846 4.756c.725.1 1.385.634 2.34 2.001A212 212 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264q.137 0 .27.018"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="meta">ميتا</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" class="bi bi-microsoft" viewBox="0 0 16 16">
+              <path d="M7.462 0H0v7.19h7.462zM16 0H8.538v7.19H16zM7.462 8.211H0V16h7.462zm8.538 0H8.538V16H16z"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="microsoft">مايكروسوفت</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" class="bi bi-linkedin" viewBox="0 0 16 16">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="linkedin">لينكد إن</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="github">جيت هاب</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+              <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+              <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="apple">أبل</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor" class="bi bi-amazon" viewBox="0 0 16 16">
+              <path d="M10.813 11.968c.157.083.36.074.5-.05l.005.005a90 90 0 0 1 1.623-1.405c.173-.143.143-.372.006-.563l-.125-.17c-.345-.465-.673-.906-.673-1.791v-3.3l.001-.335c.008-1.265.014-2.421-.933-3.305C10.404.274 9.06 0 8.03 0 6.017 0 3.77.75 3.296 3.24c-.047.264.143.404.316.443l2.054.22c.19-.009.33-.196.366-.387.176-.857.896-1.271 1.703-1.271.435 0 .929.16 1.188.55.264.39.26.91.257 1.376v.432q-.3.033-.621.065c-1.113.114-2.397.246-3.36.67C3.873 5.91 2.94 7.08 2.94 8.798c0 2.2 1.387 3.298 3.168 3.298 1.506 0 2.328-.354 3.489-1.54l.167.246c.274.405.456.675 1.047 1.166ZM6.03 8.431C6.03 6.627 7.647 6.3 9.177 6.3v.57c.001.776.002 1.434-.396 2.133-.336.595-.87.961-1.465.961-.812 0-1.286-.619-1.286-1.533M.435 12.174c2.629 1.603 6.698 4.084 13.183.997.28-.116.475.078.199.431C13.538 13.96 11.312 16 7.57 16 3.832 16 .968 13.446.094 12.386c-.24-.275.036-.4.199-.299z"/>
+              <path d="M13.828 11.943c.567-.07 1.468-.027 1.645.204.135.176-.004.966-.233 1.533-.23.563-.572.961-.762 1.115s-.333.094-.23-.137c.105-.23.684-1.663.455-1.963-.213-.278-1.177-.177-1.625-.13l-.09.009q-.142.013-.233.024c-.193.021-.245.027-.274-.032-.074-.209.779-.556 1.347-.623"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="amazon">أمازون</figcaption>
+          </figure>
+
+          <figure class="figure" role="listitem" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+            </svg>
+            <figcaption class="figure-caption" data-partner="youtube">يوتيوب</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact container" id="cont" aria-labelledby="contact-heading">
+
+      <div class="row py-5">
+
+        <div class="img-holder col-0 col-lg-6 d-none d-lg-flex justify-content-center align-content-center h-100">
+          <img 
+            srcset="images/vecteezy_faq-concept-illustration-people-looking-through-magnifying_10869740.webp 800w"
+            sizes="(max-width: 768px) 100vw, 550px"
+            src="images/vecteezy_faq-concept-illustration-people-looking-through-magnifying_10869740.webp"
+            alt="رسم توضيحي لأشخاص يتعاونون مع أدوات تعلم الذكاء الاصطناعي"
+            draggable="false" 
+            loading="lazy"
+            decoding="async"
+            width="550" 
+            height="400">
+        </div>
+  
+        <form action="" method="post" class="col-lg-6 row mx-auto justify-content-center justify-content-md-end" novalidate>
+          <fieldset class="border-0 row px-lg-5">
+            <legend id="contact-heading" class="text-center mb-4 fw-bold fs-2">راسلنا</legend>
+            
+            <div class="col-12 mb-3">
+              <label for="name" class="form-label" id="name-label">
+                الاسم
+                <span class="required-indicator" aria-label="مطلوب">*</span>
+              </label>
+              <input 
+                type="text" 
+                aria-autocomplete="list" 
+                autocomplete="name" 
+                class="form-control" 
+                name="Name" 
+                id="name" 
+                required 
+                aria-required="true"
+                aria-labelledby="name-label"
+                aria-describedby="name-error"
+                minlength="2" 
+                placeholder="اسمك" 
+                title="ادخل اسمك">
+              <div id="name-error" class="error-message" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="col-12 mb-3">
+              <label for="email" class="form-label" id="email-label">
+                الايميل
+                <span class="required-indicator" aria-label="مطلوب">*</span>
+              </label>
+              <input 
+                type="email" 
+                autocomplete="email" 
+                aria-autocomplete="list" 
+                class="form-control" 
+                id="email" 
+                name="Email" 
+                required 
+                aria-required="true"
+                aria-labelledby="email-label"
+                aria-describedby="email-error"
+                title="example@gmail.com" 
+                placeholder="example@gmail.com">
+              <div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="col-12 mb-5">
+              <label for="text" class="form-label" id="message-label">
+                الرسالة
+                <span class="required-indicator" aria-label="مطلوب">*</span>
+              </label>
+              <textarea 
+                required 
+                minlength="2" 
+                aria-required="true" 
+                class="form-control" 
+                id="text" 
+                name="message"
+                aria-labelledby="message-label"
+                aria-describedby="message-error"
+                title="اترك رسالتك" 
+                placeholder="اترك رسالتك هنا"></textarea>
+              <div id="message-error" class="error-message" role="alert" aria-live="polite"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mx-auto col-10">إرسال</button>
+          </fieldset>
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="pt-4" role="contentinfo">
+
+    <div class="container px-lg-5">
+
+      <h2 class="fs-2 mb-3">مُذاكِر</h2>
+  
+      <p class="fs-5 mb-4">تنظيم مذاكرتك باستخدام الذكاء الاصطناعي, لرفع إنتاجيتك و تحسين أدائك و مستواك الدراسي.</p>
+      <div class="social-links mb-4" aria-label="روابط التواصل الاجتماعي">
+        <ul class="list-unstyled d-flex">
+          <li><a href="https://facebook.com" class="text-decoration-none" aria-label="فيسبوك - تابعنا على فيسبوك">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </svg>
+          </a></li>
+          <li><a href="https://linkedin.com/" class="text-decoration-none" aria-label="لينكد إن - تابعنا على لينكد إن">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+            </svg>
+          </a></li>
+          <li><a href="https://instagram.com/" class="text-decoration-none" aria-label="انستغرام - تابعنا على انستغرام">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg>
+          </a></li>
+          <li><a href="https://discord.com/" class="text-decoration-none" aria-label="ديسكورد - انضم إلى مجتمعنا على ديسكورد">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0 a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+          </svg>
+          </a></li>
+          <li><a href="https://telegram.com/" class="text-decoration-none" aria-label="تليجرام - تابعنا على تليجرام">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+          </svg>
+          </a></li>
+        </ul>
+      </div>
+
+      <p class="border border-bottom-0 border-start-0 border-end-0 border-righ border-top-1 py-4 fs-5">جميع الحقوق محفوظة لفريق مذاكر <bdi>2026</bdi> &copy;</p>
+    </div>
+
+  </footer>
+
+  <!-- Three.js - Required for Vanta (Always loads now) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+  
+  <!-- Vanta.js HALO Effect (Always loads now) -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.halo.min.js" defer></script>
+
+  <script src="JS/script.js" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</body>
+</html>

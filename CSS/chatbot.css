@@ -1,0 +1,486 @@
+@import "tailwindcss";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@theme {
+  --color-accent-blue: hsl(215, 100%, 36%);
+  --color-accent-white: #ffffff;
+  --color-black-100: hsl(0, 0%, 8%);
+  --color-black-400: hsl(0, 0%, 13%);
+  --color-black-900: hsl(0, 0%, 23%);
+  --start-padding: calc(22 * 0.25rem);
+  --width: clamp(300px,80vw,590px);
+  --left: calc( (( 100vw + var(--start-padding) ) / 2 ) - ( var(--width) / 2 ));
+}
+
+/* Custom Reset & Base Styles */
+@layer base {
+  html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+  }
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+}
+
+html[dir="ltr"] body {
+  direction: ltr;
+  font-family: "Inter", sans-serif!important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  color-scheme: light;
+  @apply bg-white;
+  @apply text-(--main-text);
+  svg {
+    fill: black;
+  }
+}
+
+aside {
+  background-color: #E9EEF6;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out , width 0.3s 
+ease;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+aside.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+
+html.dark aside {
+  @apply bg-black-100;
+}
+
+html.dark body {
+  color-scheme: dark;
+  @apply bg-black-400;
+  svg {
+    fill: white;
+  }
+}
+
+html {
+  --main-text: black;
+  --shadow: #00000044;
+  --bg-hover: hsl(215, 16%, 92%);
+  --msg-bg: #f3f4f6;
+  --user-msg-bg: hsl(0, 0%, 70%);
+  --menu-bg: white;
+  --menu-border: #e5e7eb;
+  --menu-hover: #f9fafb;
+  --bg-form: #e0e0e0;
+}
+
+html.dark {
+  --main-text: white;
+  --shadow: #ffffff44;
+  --bg-hover: rgb(55, 55, 55);
+  --msg-bg: hsl(0, 0%, 20%);
+  --user-msg-bg: hsl(210, 2%, 33%);
+  --menu-bg: hsl(0, 0%, 13%);
+  --menu-border: hsl(0, 0%, 25%);
+  --menu-hover: hsl(0, 0%, 18%);
+  --bg-form: rgba(0, 0, 0, 0.829);
+}
+
+button:not(textarea ~ button):hover {
+  background-color: var(--bg-hover);
+}
+
+svg:hover {
+  background: none !important;
+}
+
+.theme-btn .sun {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.theme-btn .moon {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+html.dark .theme-btn .sun {
+  opacity: 0;
+}
+
+html.dark .theme-btn .moon {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  aside {
+    display: flex!important;
+    translate: 0!important;
+    opacity: 1!important;
+  }
+}
+
+
+.active-btn {
+  background-color: hsl(215, 100%, 36%);
+  &:hover {
+    background-color: hsl(215, 100%, 40%);
+  }
+
+  svg {
+    fill: white !important;
+  }
+}
+
+.theme-btn {
+  display: grid;
+  grid-template-areas: "stack";
+  justify-content: center;
+  align-content: center;
+
+  svg {
+    grid-area: stack;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  html:has(aside:hover) {
+    --start-padding: calc( 82 * 0.25rem );
+  }
+}
+
+form {
+box-shadow:  14px 14px 33px #c7c7c7,
+            -14px -14px 33px var(--bg-form);
+}
+
+textarea ~ button {
+  display: none;
+}
+textarea:not(:placeholder-shown) ~ button {
+  display: block;
+}
+
+
+/* Menu System */
+.menu-btn {
+  position: relative;
+}
+
+[data-menu] {
+  position: fixed;
+  background-color: var(--menu-bg);
+  border: 1px solid var(--menu-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  min-width: 200px;
+  max-width: 280px;
+  animation: fadeIn 0.2s ease;
+  overflow: hidden;
+}
+
+html.dark [data-menu] {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    --start-padding: 0;
+    --left: calc( 100vw / 2 -  var(--width) / 2 );
+  }
+} 
+
+/* Sidebar Menus - positioned next to sidebar */
+[data-menu="chat-history"],
+[data-menu="starred-chats"],
+[data-menu="settings"],
+[data-menu="profile"] {
+  inset-inline-start: 6rem;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  z-index: 10000000;
+}
+
+/* File Upload Menu - positioned above the button */
+
+[data-menu].hidden {
+  display: none;
+}
+
+/* Menu Items */
+.menu-item,
+.file-menu-item,
+.history-item,
+.setting-item,
+.profile-item {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--main-text);
+  user-select: none;
+}
+
+.menu-item:hover,
+.file-menu-item:hover,
+.history-item:hover,
+.setting-item:hover,
+.profile-item:hover {
+  background-color: var(--menu-hover);
+}
+
+.menu-item:active,
+.file-menu-item:active {
+  transform: scale(0.98);
+}
+
+.history-item.active-item,
+.setting-item.active-item,
+.profile-item.active-item {
+  background-color: hsl(215, 100%, 36%);
+  color: white;
+}
+
+.history-item.active-item > *,
+.setting-item.active-item > *,
+.profile-item.active-item > * {
+  color: white !important;
+}
+
+/* Menu Separators */
+.menu-separator {
+  height: 1px;
+  background-color: var(--menu-border);
+  margin: 0.5rem 0;
+}
+
+/* Menu Headers */
+.menu-header {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--main-text);
+  opacity: 0.7;
+}
+
+
+
+
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+[data-menu]::-webkit-scrollbar {
+  width: 6px;
+}
+
+[data-menu]::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-menu]::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+[data-menu]::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+html.dark [data-menu]::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+html.dark [data-menu]::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Empty State */
+.text-xs.text-gray-500 {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  color: var(--main-text);
+  opacity: 0.6;
+}
+
+
+button[title] {
+  position: relative;
+}
+
+button[title]:hover::before {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  z-index: 100000000;
+  margin-bottom: 5px;
+  pointer-events: none;
+}
+
+.message {
+  border-radius: 12px;
+  padding: .7rem;
+  color: var(--main-text);
+  display: flex;
+  align-self: start;
+  background-color: var(--msg-bg);
+  flex-grow: 0;
+  width: fit-content;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0.2rem;
+    inset-inline-start: -3rem;
+    border-radius: 50%;
+    flex-grow: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.message.user {
+  background-color: var(--user-msg-bg);
+  align-self: end;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0.2rem;
+    inset-inline-end: -3.5rem;
+    inset-inline-start: initial;
+    border-radius: 50%;
+    flex-grow: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.message.loading img {
+  animation: shade 1.7s linear infinite;
+}
+
+@keyframes shade {
+  0% , 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .5;
+  }
+}
+
+.insert-media {
+  position: relative;
+
+  &:hover::before {
+    opacity: 1;
+    visibility: visible;
+    translate: -50% 0;
+  }
+
+  &::before {
+    content: 'Coming Soon...';
+    font-size: clamp(.8rem, 4vw , 1.025rem);
+    position: absolute;
+    z-index: 100000;
+    padding: .5rem .7rem;
+    border-radius: 12px;
+    background-color: var(--menu-bg);
+    color: var(--main-text);
+    top: -35px;
+    left: 50%;
+    translate: -50% 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 350ms , visibility 350ms , translate 350ms; 
+    width: max-content;
+    height: fit-content;
+  }
+}
+
+button[title]:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+  z-index: 100000000;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .hide ~ aside {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  aside {
+    display: flex!important;
+  }
+}
+
+.messages {
+  scrollbar-color: gray transparent;
+}
+
+.insert-media {
+  background-color: transparent;
+}
+
+.insert-media:hover,
+.insert-media:focus,
+.insert-media:focus-visible {
+  background-color: #3b82f6;
+  color: white;
+}
+
+html canvas {
+  position: fixed!important;
+  inset: 0!important;
+  filter: brightness(85%);
+}
+
+html.dark canvas {
+  filter: brightness(30%);
+}

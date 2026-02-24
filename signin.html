@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mozaker AI | Sign In</title>
+    <meta name="keywords" content="مذاكر , AI , ai , Ai , aI , مذاكره , ذاكر , ذكر , مساعد , اصناعي , وقت , mozaker , mozker , mozakr">
+
+    <!-- Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Performance optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="description" content="Sign in to Mozaker - Your AI Learning Assistant">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mozaker.com/signin">
+    <meta name="author" content="فريق مذاكر | mozaker team">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="HandheldFriendly" content="true">
+
+    <!-- Language alternates -->
+    <link rel="alternate" hreflang="en" href="https://mozaker.com/en/signin">
+    <link rel="alternate" hreflang="ar" href="https://mozaker.com/ar/signin" />
+    <link rel="alternate" hreflang="x-default" href="https://mozaker.com/signin" />
+
+  <!-- Favicon and theme -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <meta name="theme-color" content="#0047AB">
+  <meta name="apple-mobile-web-app-title" content="Mozaker | مُذاكر " />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+
+    <!-- Social sharing (Open Graph and Twitter Cards) -->
+    <meta property="og:title" content="Mozaker AI | Sign In">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mozaker.com/signin">
+    <meta property="og:image" content="images/social-sharing.png">
+    <meta property="og:description" content="Sign in to Mozaker - Your AI Learning Assistant">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@yourtwitterhandle">
+    <meta name="twitter:title" content="Mozaker AI | Sign In">
+    <meta name="twitter:description" content="Sign in to Mozaker - Your AI Learning Assistant">
+    <meta name="twitter:image" content="images/social-sharing.png">
+
+    <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "تسجيل الدخول - مذاكر AI",
+    "alternateName": "Sign In - Mozaker AI",
+    "url": "https://mozaker.com/signin",
+    "description": "سجل دخولك إلى منصة مذاكر AI للوصول إلى المساعد الذكي والموارد التعليمية",
+    "inLanguage": ["ar", "en"],
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "مذاكر AI",
+      "url": "https://mozaker.com"
+    },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://mozaker.com/images/logo.png"
+    },
+    "potentialAction": {
+      "@type": "Action",
+      "name": "تسجيل الدخول",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://mozaker.com/signin"
+      }
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "https://mozaker.com"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "تسجيل الدخول",
+      "item": "https://mozaker.com/signin"
+    }]
+  }
+  </script>
+
+    <!-- Bootstrap CSS File -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Our CSS Files -->
+    <link rel="stylesheet" href="CSS/signin.css">
+    <link rel="stylesheet" href="CSS/auth-modal.css">
+    <link rel="stylesheet" href="CSS/auth-addition.css">
+  </head>
+
+  <body>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay">
+      <div class="loader"></div>
+      <p id="loadingText">Loading...</p>
+    </div>
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+      <button id="langToggle" class="lang-btn" aria-label="Switch to Arabic">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm7.931 9h-2.764a14.67 14.67 0 00-1.792-6.243A8.013 8.013 0 0117.931 9zM10 18a8.006 8.006 0 01-5.375-2.069c.397-.398.89-.737 1.467-1.001A12.932 12.932 0 0010 15.93a12.932 12.932 0 003.908-1A6.006 6.006 0 0115.375 15.931 8.006 8.006 0 0110 18zm-3.908-4.07A11.001 11.001 0 016 10c0-1.38.354-2.68.908-3.93A11.001 11.001 0 0110 6.07a11.001 11.001 0 013.092-.001A11.001 11.001 0 0114 10c0 1.38-.354 2.68-.908 3.93A11.001 11.001 0 0110 13.93a11.001 11.001 0 01-3.908 0zM6.625 2.757A14.67 14.67 0 004.833 9H2.069a8.013 8.013 0 014.556-6.243zM2.069 11h2.764a14.67 14.67 0 001.792 6.243A8.013 8.013 0 012.069 11zm11.556 6.243A14.67 14.67 0 0015.167 11h2.764a8.013 8.013 0 01-4.556 6.243z" fill="currentColor"/>
+        </svg>
+        <span id="langText">AR</span>
+      </button>
+    </div>
+
+    <!-- Main Container -->
+    <main class="container-fluid d-flex px-0 min-vh-100 w-100">
+
+      <!-- Form Container -->
+      <section class="form-container d-flex col-12 justify-content-center justify-content-xxlg-end pe-xxlg-5 align-content-center col-md-6 flex-wrap" id="formContainer">
+
+        <form action="" method="post" class="d-flex flex-column justify-content-center">
+          
+          <h2 class="fs-1 text-center" style="margin-bottom: 3.3rem;" data-i18n="welcome">Welcome back</h2>
+
+          <fieldset class="d-flex flex-column">
+            <!-- Google Sign-In Button -->
+            <button class="rounded-pill mb-3" type="button" id="googleBtn">
+                <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" class="mx-2" alt="google logo" aria-hidden="true">
+                <span data-i18n="continueGoogle">Continue With Google</span>
+            </button>
+          </fieldset>
+
+          <fieldset class="d-flex flex-column text-center mt-3">
+            <legend class="position-relative" data-i18n="or">or</legend>
+
+            <input type="email" required aria-required="true" aria-autocomplete="email" autocomplete="email" data-i18n-placeholder="emailPlaceholder" placeholder="Enter email address" class="mt-3 rounded-4 text-white" name="Email">
+
+            <button type="submit" class="mt-4 mb-3 rounded-pill">
+              <span data-i18n="continue">Continue</span>
+            </button>
+
+            <p>
+              <span data-i18n="agreementText">By continuing, you agree to Mozaker</span>
+              <a href="https://www.termsfeed.com/live/64b988c9-36f6-45d8-bf57-4ca917ba6f30" rel="noopener" target="_blank" data-i18n="terms">Terms of Service</a>
+              <span data-i18n="and">and</span>
+              <a href="https://www.termsfeed.com/live/7cf4765a-e1cc-47aa-abeb-7f0993dd077e" rel="noopener" target="_blank" data-i18n="privacy">Privacy Policy</a>.
+            </p>
+
+            <p class="mk-acc">If You Don't Have An Account Insert Your Email Address And Click Continue To Make One.</p>
+            
+          </fieldset>
+
+        </form>
+      </section>
+
+      <!-- Animated Books Container -->
+      <section class="books-holder z-n1 d-none d-md-flex position-fixed" aria-hidden="true">
+
+        <div class="cont d-flex">
+
+          <div class="holder" style="--move: 3rem">
+            <img src="images/img-1.png" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-2.png" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-3.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-4.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-5.jpeg" alt="Book Cover Image" loading="lazy">
+          </div>
+  
+          <div class="holder" style="--move: -3rem">
+            <img src="images/img-6.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-7.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-8jpeg.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-9.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-10.jpeg" alt="Book Cover Image" loading="lazy">
+          </div>
+  
+          <div class="holder mb-5" style="--move: 3rem">
+            <img src="images/img-11.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-12.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-13.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-14.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-15.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-15.jpeg" alt="Book Cover Image" loading="lazy">
+          </div>
+  
+          <div class="holder" style="--move: -3rem">
+            <img src="images/img-16.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-17.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-18.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-19.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-20.jpeg" alt="Book Cover Image" loading="lazy">
+          </div>
+
+          <div class="holder" style="--move: 3rem">
+            <img src="images/img-21.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-22.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-23.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-24.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-25.jpeg" alt="Book Cover Image" loading="lazy">
+          </div>
+
+          <div class="holder" style="--move: -3rem">
+            <img src="images/img-6.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-7.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-8jpeg.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-9.jpeg" alt="Book Cover Image" loading="lazy">
+            <img src="images/img-10.jpeg" alt="Book Cover Image" loading="lazy">
+          </div>
+
+        </div>
+      </section>
+    </main>
+    
+    <!-- Scripts -->
+    
+    <!-- 1. Language Switcher -->
+    <script src="JS/signin.js"></script>
+    
+    <!-- 2. Main Auth Logic (Google + Email/Password + Forgot Password) -->
+    <script src="JS/auth.js"></script>
+    
+  </body>
+</html>
