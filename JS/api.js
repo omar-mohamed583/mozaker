@@ -40,7 +40,7 @@ class ChatAPI {
   }
 
   async createChat(firstMessage) {
-    const response = await this.request('/chat/new', {
+    // const response = await this.request('api/chat/new', {
       method: 'POST',
       body: JSON.stringify({ firstMessage })
     });
@@ -48,17 +48,17 @@ class ChatAPI {
   }
 
   async getAllChats() {
-    const response = await this.request('/chat/all', { method: 'GET' });
+    const response = await this.request('/api/chat/all', { method: 'GET' });
     return response.json();
   }
 
   async getChat(chatId) {
-    const response = await this.request(`/chat/${chatId}`, { method: 'GET' });
+    const response = await this.request(`/api/chat/${chatId}`, { method: 'GET' });
     return response.json();
   }
 
   async sendMessage(chatId, content) {
-    const response = await this.request(`/chat/${chatId}/message`, {
+    const response = await this.request(`/api/chat/${chatId}/message`, {
       method: 'POST',
       body: JSON.stringify({ content })
     });
@@ -66,17 +66,17 @@ class ChatAPI {
   }
 
   async deleteChat(chatId) {
-    const response = await this.request(`/chat/${chatId}`, { method: 'DELETE' });
+    const response = await this.request(`/api/chat/${chatId}`, { method: 'DELETE' });
     return response.json();
   }
 
   async toggleStar(chatId) {
-    const response = await this.request(`/chat/${chatId}/star`, { method: 'PUT' });
+    const response = await this.request(`/api/chat/${chatId}/star`, { method: 'PUT' });
     return response.json();
   }
 
   async updateTitle(chatId, title) {
-    const response = await this.request(`/chat/${chatId}/title`, {
+    const response = await this.request(`/api/chat/${chatId}/title`, {
       method: 'PUT',
       body: JSON.stringify({ title })
     });
