@@ -444,7 +444,7 @@ async function init() {
   }
 
   try {
-    const res  = await fetch('http://localhost:5000/api/auth/me', { headers:{'Authorization':'Bearer '+tok}, credentials:'include' });
+    const res  = await fetch('https://mozaker-production.up.railway.app/api/auth/me', { headers:{'Authorization':'Bearer '+tok}, credentials:'include' });
     const data = await res.json();
     if (data.success) {
       state.user = data.user;

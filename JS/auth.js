@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'hmozaker-production.up.railway.app';
 
 // Google OAuth Configuration
 const GOOGLE_CLIENT_ID = '155810410963-2tgc77b5233st02sb5mcehoip9udmf3l.apps.googleusercontent.com';
