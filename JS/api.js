@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://mozaker-production.up.railway.app';
 
 class ChatAPI {
   constructor() {
