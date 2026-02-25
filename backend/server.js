@@ -14,6 +14,7 @@ const allowedOrigins = [
   'https://127.0.0.1:5500',
   'http://localhost:3000',
   'https://localhost:3000',
+  'https://mozakerai.vercel.app',
   process.env.FRONTEND_URL,
   process.env.CLIENT_URL
 ].filter(Boolean);
