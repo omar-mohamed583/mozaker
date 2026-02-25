@@ -40,7 +40,7 @@ class ChatAPI {
   }
 
   async createChat(firstMessage) {
-    // const response = await this.request('api/chat/new', {
+    const response = await this.request('/api/chat/new', {
       method: 'POST',
       body: JSON.stringify({ firstMessage })
     });
