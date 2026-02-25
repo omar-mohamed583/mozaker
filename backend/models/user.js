@@ -67,8 +67,10 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
 
 // Update last login
 userSchema.methods.updateLastLogin = async function () {
-  this.lastLogin = new Date();
-  await this.save({ validateBeforeSave: false });
+  await this.constructor.updateOne(
+    { _id: this._id },
+    { lastLogin: new Date() }
+  );
 };
 
 userSchema.index({ email: 1 });
