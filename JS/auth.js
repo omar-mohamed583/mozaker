@@ -1,6 +1,5 @@
 const API_URL = 'https://mozaker-production.up.railway.app/api';
 
-// Google OAuth Configuration
 const GOOGLE_CLIENT_ID = '155810410963-2tgc77b5233st02sb5mcehoip9udmf3l.apps.googleusercontent.com';
 
 // Authentication Manager
