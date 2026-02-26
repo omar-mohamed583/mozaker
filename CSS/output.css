@@ -1238,6 +1238,10 @@ html canvas {
 html.dark canvas {
   filter: brightness(30%);
 }
+.conversation img {
+  aspect-ratio: 1;
+  width: clamp(23px,7vw,48px);
+}
 @media (max-width: 600px) {
   .messages img {
     display: none;
