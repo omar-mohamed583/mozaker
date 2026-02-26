@@ -1238,6 +1238,11 @@ html canvas {
 html.dark canvas {
   filter: brightness(30%);
 }
+@media (max-width: 600px) {
+  .messages img {
+    display: none;
+  }
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
