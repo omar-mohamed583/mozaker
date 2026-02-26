@@ -888,6 +888,7 @@
   }
   h1, h2, h3, h4 {
     text-wrap: balance;
+    z-index: 10000000;
   }
 }
 html[dir="ltr"] body {
